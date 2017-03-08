@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qJq-eN-e2H" customClass="LKRandomChatView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-jD-Y7k"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="i0E-3M-QNj">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="qdV-qB-LKa"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9xh-QK-Auv">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTk-aI-wbg">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7dW-L7-5yr"/>
+                        <constraint firstAttribute="width" constant="46" id="P7c-9c-2Jh"/>
+                    </constraints>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="didClickedStopBtn:" destination="qJq-eN-e2H" eventType="touchUpInside" id="ex1-Xc-VnL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Feq-jD-Y7k" firstAttribute="leading" secondItem="XTk-aI-wbg" secondAttribute="trailing" constant="-173" id="0Au-J5-4t8"/>
+                <constraint firstAttribute="trailing" secondItem="Feq-jD-Y7k" secondAttribute="trailing" id="Nlt-cP-jXw"/>
+                <constraint firstAttribute="trailing" secondItem="i0E-3M-QNj" secondAttribute="trailing" constant="8" id="OgI-eW-Ozz"/>
+                <constraint firstAttribute="bottom" secondItem="Feq-jD-Y7k" secondAttribute="bottom" id="Ucb-Eo-ggW"/>
+                <constraint firstAttribute="bottom" secondItem="XTk-aI-wbg" secondAttribute="bottom" constant="20" id="apB-CA-vc9"/>
+                <constraint firstItem="i0E-3M-QNj" firstAttribute="leading" secondItem="qJq-eN-e2H" secondAttribute="leading" constant="8" id="kH5-Ia-W2v"/>
+                <constraint firstItem="Feq-jD-Y7k" firstAttribute="top" secondItem="qJq-eN-e2H" secondAttribute="top" id="rFZ-gR-fUO"/>
+                <constraint firstItem="Feq-jD-Y7k" firstAttribute="leading" secondItem="qJq-eN-e2H" secondAttribute="leading" id="sft-cM-Z23"/>
+                <constraint firstAttribute="bottom" secondItem="i0E-3M-QNj" secondAttribute="bottom" constant="100" id="z9q-Mh-rrN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="XTk-aI-wbg" id="ilT-ei-IZ4"/>
+                <outlet property="collectionView" destination="i0E-3M-QNj" id="wCa-qo-79o"/>
+                <outlet property="flowLayout" destination="9xh-QK-Auv" id="rws-8y-I3s"/>
+                <outlet property="photoWall" destination="Feq-jD-Y7k" id="Ru1-dB-26O"/>
+            </connections>
+            <point key="canvasLocation" x="-112.5" y="195.5"/>
+        </view>
+    </objects>
+</document>
